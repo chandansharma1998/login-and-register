@@ -25,7 +25,7 @@ const Login = ({setLoginUser}) => {
   const login = () => {
     const {email,password} = user;
     if(email && password){
-      axios.post('http://localhost:5000/login',user)
+      axios.post('https://login-and-register-app.herokuapp.com/login',user)
       .then((res) => {
         alert(res.data.message)
         setLoginUser(res.data.user)
